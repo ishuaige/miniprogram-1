@@ -1,0 +1,4 @@
+/* pages/collect/index.wxss */
+.titleClass {
+    font-size: 34rpx;
+}

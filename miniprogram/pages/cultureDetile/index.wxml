@@ -1,0 +1,29 @@
+<!-- pages/cultureDetile/index.wxml -->
+<view class="culturedetile" hover-class="none" hover-stop-propagation="false">
+    <van-divider />
+    <!-- 标题 开始 -->
+    <view class="title">
+        <text>{{cultureDetile[0].title}}</text>
+    </view>
+    <!-- 标题 结束 -->
+    <van-divider />
+    <!-- 图片 开始 -->
+    <view class="detile_image">
+        <image mode='widthFix' src="{{cultureDetile[0].imgs[0]}}" class="imageclass" />
+    </view>
+    <!-- 图片 结束 -->
+    <van-divider />
+    <!-- 文本 开始 -->
+    <view class="detilecontext" style="white-space:pre-line">
+        <text decode="true" user-select="true">{{context}}</text>
+    </view>
+    <!-- 文本 结束 -->
+    <van-divider />
+    <!-- 图片们 开始 -->
+    <view class="detile_image" wx:for="{{cultureDetile[0].imgs}}" wx:key="item">
+        <image mode='widthFix' src="{{item}}" class="imageclass" />
+        <van-divider />
+    </view>
+    <!-- 图片们 结束 -->
+    <van-divider />
+</view>

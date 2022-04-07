@@ -1,0 +1,31 @@
+<!--pages/index/index.wxml-->
+<view class="app_index">
+
+	<!-- 搜索框 开始 -->
+	<navigator url="/pages/search/index">
+		<van-search value="{{value}}" shape="round" placeholder="请输入搜索关键字" bind:search="onSearch" bind:cancel="onCancel" background="#eb4450" clear-trigger="always" />
+	</navigator>
+	<!-- 搜索框 结束-->
+	<van-notice-bar left-icon="volume-o" text="该小程序仅供内部学习使用，资源均来自于网上，若有使用不当，侵权等问题，请及时联系作者，感谢您的支持！"  bind:click="onClickNotice"/>
+
+	<!-- 轮播图 开始 -->
+	<view class="index_swiper">
+		<swiper autoplay indicator-dots circular>
+			<swiper-item wx:for="{{swiperList}}" wx:key="_id">
+				<navigator url="/pages/cultureDetile/index?cultureId={{item.cultureId}}">
+					<image mode="aspectFill" src="{{item.img}}"></image>
+				</navigator>
+			</swiper-item>
+		</swiper>
+	</view>
+	<!-- 轮播图 结束 -->
+
+	<!-- 楼层 开始 -->
+	<view class="index_floor">
+		<van-cell-group wx:for="{{cultureList}}" wx:key="_id">
+			<van-cell icon="fire" title="{{item.title}}" label="{{item.author}}" url="/pages/cultureDetile/index?cultureId={{item._id}}"  title-class="titleClass"/>
+		</van-cell-group>
+	</view>
+	<!-- 楼层 结束 -->
+
+</view>

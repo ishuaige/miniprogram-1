@@ -1,0 +1,18 @@
+<!--pages/category/index.wxml-->
+<view class="app_category" hover-class="none" hover-stop-propagation="false">
+    
+    <!--标签 开始-->
+    <van-tabs active="{{ active }}" bind:change="onChange" ellipsis="false" swipe-threshold="2" animated="true">
+        <van-tab wx:for="{{category}}" wx:key="_id" title="{{item.name}}" slot="aaa">
+        </van-tab>
+    </van-tabs>
+    <!-- 标签 结束 -->
+
+    <!-- 楼层 开始 -->
+    <view class="index_floor">
+        <van-cell-group wx:for="{{cultureList}}" wx:key="_id" slot="aaa">
+            <van-cell icon="fire" title="{{item.title}}" label="{{item.author}}" url="/pages/cultureDetile/index?cultureId={{item._id}}"  title-class="titleClass"/>
+        </van-cell-group>
+    </view>
+    <!-- 楼层 结束 -->
+</view>

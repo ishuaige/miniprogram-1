@@ -1,0 +1,5 @@
+<view class="app_collect">
+    <van-cell-group wx:for="{{collectList}}" wx:key="_id">
+        <van-cell icon="fire" title="{{item.title}}" label="{{item.author}}" url="/pages/cultureDetile/index?cultureId={{item._id}}"  title-class="titleClass"/>
+    </van-cell-group>
+</view>

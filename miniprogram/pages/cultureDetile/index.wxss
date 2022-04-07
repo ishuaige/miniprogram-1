@@ -1,0 +1,30 @@
+.detile_image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageclass {
+  padding-right: 40rpx;
+  padding-left: 40rpx;
+  width: 100%;
+  padding-top: 30rpx;
+}
+.detilecontext {
+  font-family: "segoe ui", "microsoft yahei", "microsoft mhei", stheititc, sans-serif;
+  font-weight: normal;
+  font-size: 14rpx;
+  line-height: 21rpx;
+  letter-spacing: normal;
+}
+.detilecontext {
+  padding: 0rpx 35rpx;
+  font-size: 35rpx;
+  color: #454545;
+  line-height: 55rpx;
+}
+.title {
+  padding: 0rpx 20rpx 0rpx 35rpx;
+  font-size: 50rpx;
+  line-height: 60rpx;
+  font-weight: bold;
+}

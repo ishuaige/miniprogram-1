@@ -1,0 +1,14 @@
+<!--pages/search/index.wxml-->
+<view class="app_search" hover-class="none" hover-stop-propagation="false">
+        <!-- 搜索框 开始 -->
+        <van-search value="{{value}}" shape="round" placeholder="请输入搜索关键字" bind:change="onChange" bind:search="onSearch" bind:cancel="onCancel" background="#eb4450" clear-trigger="always" />
+        <!-- 搜索框 结束 -->
+
+        <!-- 楼层 开始 -->
+        <view class="search_floor">
+                <van-cell-group wx:for="{{cultureList}}">
+                        <van-cell icon="fire" title="{{item.title}}" label="{{item.author}}" url="/pages/cultureDetile/index?cultureId={{item._id}}" />
+                </van-cell-group>
+        </view>
+        <!-- 楼层 结束 -->
+</view>
